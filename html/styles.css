@@ -1,0 +1,199 @@
+* {
+    font-family: 'Bahnschrift Semicondensed';
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    overflow: hidden;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 32.5%;
+    height: 80%;
+    background-color: rgba(30,30,30,0.9);
+    border-radius: 1vh;
+    clip-path: polygon(5vh 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 5vh);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 7vh;
+    font-weight: 1000;
+    color: #6c25be;
+    text-shadow: 0 0 1vh rgba(108, 37, 190, 0.6);
+}
+
+.messages-container {
+    width: 90%;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    gap: 3%;
+    padding: 1%;
+}
+
+.container {
+    width: 95%;
+    height: 20vh;
+    background-color: rgba(35,35,35, 0.4);
+    border-radius: 1vh;
+    border: solid 0.1vh rgb(40, 40, 40);
+    flex-shrink: 0;
+    box-shadow: 0.75vh 0.75vh 1vh rgba(0, 0, 0, 0.2);
+}
+
+.top-part {
+    width: 100%;
+    height: 6vh;
+    border-radius: 1vh 1vh 0 0;
+    border-bottom: solid 0.1vh rgb(40, 40, 40);
+    background-color: rgba(20,20,20, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.inner-title {
+    margin-left: 2%;
+    color: white;
+    text-shadow: 0 0 0.75vh rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+}
+
+.bottom-part {
+    width: 100%;
+    height: 85%;
+    border-radius: 0 0 1vh 1vh;
+    padding: 2%;
+    overflow-y: auto;
+}
+
+p {
+    color: rgb(240, 240, 240);
+    font-weight: 100;
+    font-size: 1.5vh;
+}
+
+.content-image,
+.content-video,
+.content-iframe {
+    height: 50%; 
+    margin: 1vh;
+    width: auto;
+    border-radius: 1vh;
+    box-shadow: 0.5vh 0.5vh 0.5vh rgba(0, 0, 0, 0.2);
+}
+
+.exit-container {
+    margin-top: 1%;
+    margin-left: 88%;
+    background-color: rgba(55,55,55, 0.7);
+    color: white;
+    padding: 0.4%;
+    padding-right: 1%;
+    border-radius: 7.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.25vw;
+    font-size: 1vh;
+}
+
+.exit-container button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(40,40,40, 0.9); 
+    padding: 0.5vh 0.5vw;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+    font-size: 1vh;
+}
+
+.exit-container button:hover {
+    background-color: rgba(45,45,45, 1); 
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4e4e4e; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6c25be; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7134b6; 
+}
+
+
+.fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeInSlideUp {
+    animation: fadeInSlideUp 0.5s forwards;
+}
+
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(100%); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeOut {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fadeOutSlideDown {
+    animation: fadeOutSlideDown 0.5s forwards;
+}
+
+@keyframes fadeOutSlideDown {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(100%); }
+}
+
+.slideUp {
+    animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.slideDown {
+    animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
+}
+
